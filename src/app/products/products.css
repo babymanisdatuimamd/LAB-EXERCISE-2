@@ -1,0 +1,71 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card.out-of-stock {
+  background-color: #f87171; /* Red background for out-of-stock items */
+  color: #ffffff;
+}
+
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.description {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #16a34a;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #15803d;
+}
+
+button:disabled {
+  background-color: #d1d5db; /* Greyed-out button when disabled */
+  cursor: not-allowed;
+}
+
+
+.product-image {
+  width: 100%;            /* Image takes full width of its container */
+  height: 350px;          /* You can set a fixed height or use 'auto' */
+  object-fit: cover;      /* Ensures the image covers the area, cropping if needed */
+  border-radius: 8px;     /* Optional: rounded corners for the image */
+  margin-bottom: 12px;    /* Space below the image */
+}
